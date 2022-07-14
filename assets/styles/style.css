@@ -1,0 +1,249 @@
+/*Variáveis*/
+:root {
+  --bgSite: #d7d4ff;
+  --buttonColor: #6c63ff;
+
+  --white: #ffffff;
+  --white300: #f9f9f9;
+
+  --title: #2b2b2b;
+  --text: #555555;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input {
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+header{
+  background-color: var(--bgSite);
+  display: flex;
+  height: 560px;
+  justify-content: center;
+  width: 100%;
+}
+.header_content{
+  display:flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  padding-left: 101px;
+  padding-right: 104px;
+  width: 100%;
+}
+.header_content_left{
+  display: flex;
+  flex-direction: column;
+  width: 389px;
+}
+.header_content_left h2{
+  color: var(--title);
+  font-family: 'Merriweather';
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47px;
+  letter-spacing: 0px;
+  margin-top: 137.5px;
+  margin-bottom: 17.5px;
+}
+.header_content_left p{
+  color: var(--text);
+  font-family: 'Lato';
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 45px;
+  letter-spacing: 0px;
+}
+.header_content_left button{
+  align-items: center;
+  background-color: var(--buttonColor);
+  box-shadow: 0px 5px 5px rgba(23, 23, 23, 0.1);
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  height: 50px;
+  justify-content:center;
+  width: 155px;
+}
+.header_content_right {
+  margin-top: 77px;
+}
+.header_content_right img{
+  height: 359.7517395019531px;
+  width: 500px;
+}
+main{
+  align-items: center;
+  background: var(--white300);
+  display: flex;
+}
+.main_content{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 150px 97px 82px 101px;
+  width: 100%;
+}
+.post_container{
+  background-color: var(--white);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 423px;
+  width: 340px;
+  margin-bottom: 68px;
+  margin-left: 111px;
+}
+.post_container:nth-child(1),.post_container:nth-child(4){
+  margin-left: 0px;
+}
+.post_header{
+  height: 222px;
+  width: 100%;
+}
+.post_container:nth-child(1) .post_header{
+  background-color: #FF6363;
+}
+.post_container:nth-child(2) .post_header{
+  background-color: #63ECFF;
+}
+.post_container:nth-child(3) .post_header{
+  background-color: #F363FF;
+}
+.post_container:nth-child(4) .post_header{
+  background-color: #63FF73;
+}
+.post_container:nth-child(5) .post_header{
+  background-color: #FFDD63;
+}
+.post_container:nth-child(6) .post_header{
+  background-color: #6663FF;
+}
+.post_body{
+  margin: 24px 28px 31px 30px;
+}
+.post_body h2{
+  color: var(--title);
+  font-family: 'Merriweather';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0px;
+}
+.post_body p{
+  color: var(--text);
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  margin-top: 26px;  
+}
+footer{
+  align-items: center;
+  background-color: var(--bgSite);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+footer h2{
+  font-family: Merriweather;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  margin-top: 85px;
+  margin-bottom: 60px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+footer .form{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 471px;
+}
+.form input[type="text"]{
+  border-radius: 6px;
+  height: 65px;
+  margin-bottom: 15px;
+  outline: none;
+  padding: 21px 0px 22px 15px;
+  width: 470px;
+}
+.form textarea{
+  border: none;
+  border-radius: 6px;
+  height: 165px;
+  margin-bottom: 30px;
+  outline: none;
+  padding: 21px 0px 22px 15px;
+  width: 470px;
+}
+.form input::placeholder,.form textarea::placeholder{
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.form input[type="submit"]{
+  background-color: var(--buttonColor);
+  box-shadow: 0px 5px 5px rgba(23, 23, 23, 0.1);
+  border-radius: 5px;
+  color: var(--white);
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 80px;
+  letter-spacing: 0em;
+  padding: 13px 0px; 
+  width: 100%;
+}
