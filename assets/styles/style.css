@@ -56,7 +56,6 @@ input:focus {
 header{
   background-color: var(--bgSite);
   display: flex;
-  height: 560px;
   justify-content: center;
   width: 100%;
 }
@@ -66,6 +65,7 @@ header{
   max-width: 1440px;
   padding-left: 101px;
   padding-right: 104px;
+  padding-bottom: 119px;
   width: 100%;
 }
 .header_content_left{
@@ -123,10 +123,17 @@ main{
 .main_content{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
   max-width: 1440px;
   padding: 150px 97px 82px 101px;
   width: 100%;
+}
+.main_container{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ width:100%;
 }
 .post_container{
   background-color: var(--white);
@@ -134,13 +141,10 @@ main{
   display: flex;
   flex-direction: column;
   height: 423px;
-  width: 340px;
   margin-bottom: 68px;
-  margin-left: 111px;
+  width: 340px;
 }
-.post_container:nth-child(1),.post_container:nth-child(4){
-  margin-left: 0px;
-}
+
 .post_header{
   height: 222px;
   width: 100%;
@@ -164,7 +168,7 @@ main{
   background-color: #6663FF;
 }
 .post_body{
-  margin: 24px 28px 31px 30px;
+  margin: 24px 0px 31px 30px;
 }
 .post_body h2{
   color: var(--title);
@@ -182,6 +186,7 @@ main{
   line-height: 30px;
   letter-spacing: 0px;
   margin-top: 26px;  
+  width: 282px;
 }
 footer{
   align-items: center;
@@ -206,7 +211,14 @@ footer .form{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 471px;
+  width: 100%;
+}
+form{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 .form input[type="text"]{
   border-radius: 6px;
@@ -216,6 +228,7 @@ footer .form{
   padding: 21px 0px 22px 15px;
   width: 470px;
 }
+
 .form textarea{
   border: none;
   border-radius: 6px;
@@ -245,5 +258,52 @@ footer .form{
   margin-bottom: 80px;
   letter-spacing: 0em;
   padding: 13px 0px; 
-  width: 100%;
+  width: 471px;
 }
+@media screen and (max-width:1080px){
+  .header_content{
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header_content_left h2{
+    font-size: 32px;
+    margin-top: 55px;
+  }
+  .header_content_left p{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width:1265px) and (min-width:1217px){
+  .main_container{
+    width:95%;
+   }
+}
+@media screen and (max-width:907px) and (min-width:877px){
+  .main_container{
+    width:95%;
+   }
+}
+@media screen and (max-width:907px){
+  .main_container{
+    justify-content: center;
+   }
+   .post_container{
+    width: 374px;
+   }
+   .post_body{
+    padding-right: 31px;
+   }
+   .post_body p{
+    width: 311px;
+   }
+   .form input[type="text"],.form textarea{
+    width: 373px;
+  }
+   .form input[type="submit"]{
+    margin-bottom: 56px;
+    width: 374px;
+  }
+}
+
